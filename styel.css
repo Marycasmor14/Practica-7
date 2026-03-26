@@ -34,6 +34,12 @@ body {
     transform: translateY(-2px);
 }
 
+/* EFECTO AL PRESIONAR BOTON */
+.cta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #d39e00;
+}
+
 /* ESTILOS DE ENCABEZADO Y NAVEGACION */
 .header {
     background-color: #000000;
@@ -87,12 +93,7 @@ body {
     align-items: center;
 }
 
-.search-container{
-    display: flex;
-    align-items: center;
-}
-
-.search-bar{
+.search-bar {
     padding: 8px 12px;
     border: 2px solid #bdc3c7;
     border-radius: 4px 0 0 4px;
@@ -100,28 +101,25 @@ body {
     border-right: none;
 }
 
-.search-bar:focus{
+.search-bar:focus {
     border-color: #f39c12;
 }
 
-.search-btn{
+.search-btn {
     padding: 8px 12px;
     border: 2px solid #bdc3c7;
-}
-
-.search-btn{
     transition: background-color 0.3s, border-color 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.search-btn:hover{
+.search-btn:hover {
     background-color: #d35400;
     border-color: #d35400;
 }
 
-.search-icon-img{
+.search-icon-img {
     width: 20px;
     height: 20px;
     display: block;
@@ -129,25 +127,29 @@ body {
     filter: invert(100%);
 }
 
-.search-btn:hover .search-icon-img{
+.search-btn:hover .search-icon-img {
     filter: invert(87%) sepia(54%) saturate(638%) hue-rotate(358deg) brightness(100%) contrast(104%);
 }
 
-/*ESTILOS PAGINA PRINCIPAL*/
-.main-index{
+/* ESTILOS PAGINA PRINCIPAL */
+.main-index {
     padding: 0;
     background: none;
     flex: 1;
 }
 
-/*Hero*/
-.hero-full{
+/* Hero */
+.hero-full {
     height: 80vh;
     min-height: 500px;
-    background-image: linear-gradient(rgba(0,0,0,0.8), url('img/principal/constructora-principal.jpg'));
-      background-size: cover;
+
+    /* CORRECCION: gradiente + imagen correctamente separados */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/principal/constructora-principal.jpg');
+
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,12 +157,12 @@ body {
     padding: 20px;
 }
 
-.hero-content{
+.hero-content {
     color: white;
     max-width: 800px;
 }
 
-.hero-content h2{
+.hero-content h2 {
     font-size: 48px;
     color: #f1c40f;
     text-transform: uppercase;
@@ -168,7 +170,7 @@ body {
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
-.hero-content p{
+.hero-content p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 35px;
